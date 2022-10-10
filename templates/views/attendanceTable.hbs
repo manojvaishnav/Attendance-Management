@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Table</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    {{>favicon}}
+    <style>
+        .custab {
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin: 5% 0;
+            box-shadow: 3px 3px 2px #ccc;
+            transition: 0.5s;
+        }
+
+        .custab:hover {
+            box-shadow: 3px 3px 0px transparent;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/save_attendance/{{this.id}}" method="post">
+        <div class="container">
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                        <input type="date" name="date" class="btn btn-primary btn-xs pull-right" required>
+                        <input type="subject" value="{{this.id}}" hidden>
+                        <tr>
+                            <th class="text-center">College Id</th>
+                            <th class="text-center">Student Name</th>
+                            <th class="text-center">Attendance</th>
+                        </tr>
+                    </thead>
+                    {{#each docs}}
+                    <tr>
+                        <td class="text-center">{{this.id}}</td>
+                        <td class="text-center">{{this.name}}</td>
+                        <td class="text-center">
+                            <div class="text-center">
+                                <span><input name="attendance" value="{{this.id}}" type="checkbox">Present</span>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+                <button class="btn btn-primary btn-xs pull-right" type="submit">Submit Attendance</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

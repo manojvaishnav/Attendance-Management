@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta  http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <title>All Students</title>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    {{>favicon}}
+
+</head>
+
+<body>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">1st Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each first}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs " onclick="del"><span
+                                class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">2nd Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each second}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">3rd Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each third}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">4th Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each fourth}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">5th Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each fifth}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs" onclick="del()"><span
+                                class="glyphicon glyphicon-remove"></span> Del</a></td>
+                    {{!-- <td><button onclick="del()">del</button></td> --}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">6th Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each sixth}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">7ht Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each seventh}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-toolbar">
+        <h2 class="bg-primary">8th Semester</h2>
+    </div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birth</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each eightth}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.birth}}</td>
+                    <td>{{this.branch}}</td>
+                    <td>{{this.semester}}</td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/student/{{this._id}}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a> <a href="/student/del/{{this._id}}"
+                            class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

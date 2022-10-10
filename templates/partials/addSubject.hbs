@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Add Subject</h4>
+            <form action="/addsubject/{{this._id}}" method="post">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="subject" class="form-control" placeholder="Subject name" type="text" required>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                    </div>
+                    <select class="form-control" name="branch" required>
+                        <option hidden value=""> Select Branch</option>
+                        <option value="cse">Computer Science & Engineering</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ce">Civil Engineering</option>
+                        <option value="me">Mechanical Engineering</option>
+                        <option value="eee">Electrical Engineering</option>
+                        <option value="ece">Electronics & Communication Engineering</option>
+                        <option value="eic">Electronics Instrumentation & Control Engineering</option>
+                    </select>
+                </div> <!-- form-group end.// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa-solid fa-pen"></i> </span>
+                    </div>
+                    <select class="form-control" name="semester" required>
+                        <option hidden value=""> Select Semester</option>
+                        <option value="1st">1st Sem</option>
+                        <option value="2nd">2nd Sem</option>
+                        <option value="3rd">3rd Sem</option>
+                        <option value="4th">4th Sem</option>
+                        <option value="5th">5th Sem</option>
+                        <option value="6th">6th Sem</option>
+                        <option value="7th">7th Sem</option>
+                        <option value="8th">8th Sem</option>
+                    </select>
+                </div> <!-- form-group end.// -->
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Add Subject </button>
+                </div> <!-- form-group// -->
+            </form>
+        </article>
+    </div> <!-- card.// -->
+</div>
+<!--container end.//-->

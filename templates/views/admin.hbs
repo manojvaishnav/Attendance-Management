@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Pannel</title>
+    <base target="_self">
+    <meta name="description"
+        content="A Bootstrap 4 admin dashboard theme that will get you started. The sidebar toggles off-canvas on smaller screens. This example also include large stat blocks, modal and cards. The top navbar is controlled by a separate hamburger toggle button." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
+    <link rel="shortcut icon" href="/images/cp_ico.png">
+
+    {{>favicon}}
+
+    <!--stylesheets / link tags loaded here-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/adminStyle.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-toggleable-sm navbar-inverse bg-primary mb-3">
+        <div class="flex-row d-flex">
+            <a class="navbar-brand mb-1 head" href="#">{{this.name}}</a>
+            <button type="button" class="hidden-md-up navbar-toggler navbar-toggler-right" data-toggle="offcanvas"
+                title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container-fluid" id="main">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar" role="navigation">
+                <ul class="nav flex-column pl-1">
+                    <li class="nav-item"><a class="nav-link" href="/faculty_register">Add New Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register">Add New Student</a></li>
+                </ul>
+            </div>
+            <!--/col-->
+
+            <div class="col-md-9 col-lg-10 main">
+
+                <h1 class="display-2 hidden-xs-down">
+                    Total Students({{this.total}})
+                </h1>
+
+                <div class="row mb-3">
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-success">
+                            <div class="card-block bg-success">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/cs/students">CS Students</a></h6>
+                                <h1 class="display-1">{{this.cs}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-success">
+                            <div class="card-block bg-secondary">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/it/students">IT Students</a></h6>
+                                <h1 class="display-1">{{this.it}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-success">
+                            <div class="card-block bg-primary">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/ece/students">ECE Students</a></h6>
+                                <h1 class="display-1">{{this.ece}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-success">
+                            <div class="card-block bg-warning">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/me/students">ME Students</a></h6>
+                                <h1 class="display-1">{{this.me}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-success">
+                            <div class="card-block bg-dark">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/eic/students">EIC Students</a></h6>
+                                <h1 class="display-1">{{this.eic}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-danger">
+                            <div class="card-block bg-danger">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/ce/students">CE Students</a></h6>
+                                <h1 class="display-1">{{this.ce}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="card card-inverse card-info">
+                            <div class="card-block bg-info">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <h6 class="text-uppercase"><a class="branch" href="/eee/students">EEE Students</a></h6>
+                                <h1 class="display-1">{{this.eee}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/row-->
+
+                <hr>
+
+                <h1 class="display-2 hidden-xs-down">
+                    Faculties({{this.totalf}})
+                </h1>
+                <div class="row mb-3">
+                    <div class="col-lg-9 col-md-8">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Department</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each faculties}}
+                                    <tr>
+                                        <td>{{this.name}}</td>
+                                        <td>{{this.email}}</td>
+                                        <td>{{this.phone}}</td>
+                                        <td>{{this.department}}</td>
+                                        <td class="text-center"><a class='btn btn-info btn-xs' href="/faculty/{{this._id}}"><span
+                                                    class="glyphicon glyphicon-edit"></span> Edit</a> <a
+                                                href="/faculty/del/{{this._id}} " class="btn btn-danger btn-xs"><span
+                                                    class="glyphicon glyphicon-remove"></span> Del</a></td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--/row-->
+            </div>
+            <!--/main col-->
+        </div>
+    </div>
+
+    <!--scripts loaded here-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("[data-toggle=offcanvas]").click(function () {
+                $(".row-offcanvas").toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

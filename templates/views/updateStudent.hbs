@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{>favicon}}
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <p class="text-center">Student Update</p>
+        <hr>
+
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Update Here</h4>
+                <form action="/student/{{this._id}}" method="post">
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="name" class="form-control" value="{{this.name}}" placeholder="Full name"
+                            type="text" required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                        </div>
+                        <input name="email" class="form-control" placeholder="Email address" type="email"
+                            value="{{this.email}}" required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i> </span>
+                        </div>
+                        <input name="birth" class="form-control" placeholder="Birth Date" type="Date"
+                            value="{{this.birth}}" required>
+                    </div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                        </div>
+                        <input name="phone" class="form-control" placeholder="Phone number" type="text"
+                            value="{{this.phone}}" required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-id-card-clip"></i></span>
+                        </div>
+                        <input name="id" class="form-control" placeholder="College-Id" type="text" value="{{this.id}}"
+                            required>
+                    </div>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                        </div>
+                        <select class="form-control" name="branch" required>
+                            <option selected="">{{this.branch}}</option>
+                            <option value="cse">Computer Science & Engineering</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ce">Civil Engineering</option>
+                            <option value="me">Mechanical Engineering</option>
+                            <option value="eee">Electrical Engineering</option>
+                            <option value="ece">Electronics & Communication Engineering</option>
+                            <option value="eic">Electronics Instrumentation & Control Engineering</option>
+                        </select>
+                    </div> <!-- form-group end.// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa-solid fa-pen"></i> </span>
+                        </div>
+                        <select class="form-control" name="semester" required>
+                            <option selected="">{{this.semester}}</option>
+                            <option value="1st">1st Sem</option>
+                            <option value="2nd">2nd Sem</option>
+                            <option value="3rd">3rd Sem</option>
+                            <option value="4th">4th Sem</option>
+                            <option value="5th">5th Sem</option>
+                            <option value="6th">6th Sem</option>
+                            <option value="7th">7th Sem</option>
+                            <option value="8th">8th Sem</option>
+                        </select>
+                    </div> <!-- form-group end.// -->
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Update </button>
+                    </div> <!-- form-group// -->
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div>
+    <!--container end.//-->
+
+</body>
+
+</html>
